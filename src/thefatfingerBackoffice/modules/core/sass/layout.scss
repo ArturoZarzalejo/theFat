@@ -1,9 +1,13 @@
-#mailToolbar {
-  // background-color: #f8f8f8;
-  // border-bottom: 1px solid #e7e7e7;
-  >.md-toolbar-tools {
-    max-width: 1280px;
-  }
+// #mailToolbar {
+//   // background-color: #f8f8f8;
+//   // border-bottom: 1px solid #e7e7e7;
+//   >.md-toolbar-tools {
+//     max-width: 1280px;
+//   }
+// }
+
+#sidenavUserInfo {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .imgBackground {
@@ -25,9 +29,8 @@
   background-image: url(../assets/imgs/jlbo2.jpg);
 }
 
-[contentEditable="true"] {
-  &:focus {
-    outline: 1px dashed rgba(0,0,0,0.2);
+md-sidenav {
+  ul {
+    padding: 0 1em;
   }
 }
-

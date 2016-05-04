@@ -1,16 +1,20 @@
-<md-sidenav class="md-sidenav-left md-whiteframe-z2 md-closed" md-is-locked-open="$mdMedia('gt-xs') && isOpenLeft()" md-component-id="left">
+<md-sidenav
+  class="md-sidenav-left md-whiteframe-z2 md-closed"
+  md-component-id="left"
+  md-whiteframe="4"
+  >
   <div id="sidenavUserInfo" layout="column">
     <div flex layout="column" layout-align="center-center" layout-margin>
       <span style="background-image: url(http://static.bleacherreport.net/images/redesign/avatars/default-user-icon-profile.png);" layout></span>
-      <p>{{session.userName}}</p>
+      <p>Antonio García</p>
     </div>
     <div></div>
   </div>
   <nav layout="column" flex>
-    <ul layout="column" flex class="layoutMenu" ng-init="menu = ['contacts']">
+    <ul layout="column" flex class="layoutMenu" ng-init="menu = ['Usuarios One Day']" layout-padding layout-margin>
       <li ng-repeat="(k,v) in menu" layout="column" layout-align="center center">
         <div layout="row" layout-align="center center">
-          <md-icon md-svg-icon="{{v.icon}}" aria-label="Alarm Icon"></md-icon>
+          <md-icon md-svg-icon="assets/icons/ic_people_black_24px.svg" aria-label="Alarm Icon"></md-icon>
           <md-button ng-href="/thefatfingerBackoffice/#/usersOneDay" ng-click="open = !open" flex>
             {{v}}
           </md-button>
@@ -22,16 +26,16 @@
 
 <md-toolbar class="md-hue-2" id="mailToolbar" layout-align="center center">
    <div class="md-toolbar-tools">
-     <!-- <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-     </md-button> -->
+     <md-button class="md-icon-button md-primary" aria-label="Menu" ng-click="toggleLeft()">
+       <md-icon md-svg-icon="assets/icons/ic_menu_black_24px.svg"></md-icon>
+     </md-button>
      <h2 layout="row" layout-align="center center" layout-padding>
        <span id="alfImg" class="imgBackground"></span>
        <span class="md-body-3" flex>The FatFinger =)</span>
      </h2>
-     <md-button class="md-icon-button" aria-label="Courses" ng-click="changeView('/courses')">
+     <!-- <md-button class="md-icon-button" aria-label="Courses" ng-click="changeView('/courses')">
         <md-icon md-svg-icon="assets/icons/ic_library_books_black_24px.svg"></md-icon>
-     </md-button>
+     </md-button> -->
      <!-- <md-button class="md-icon-button" aria-label="Pages" ng-click="changeView('/courses')">
         <md-icon md-svg-icon="assets/icons/ic_view_list_black_24px.svg"></md-icon>
      </md-button> -->

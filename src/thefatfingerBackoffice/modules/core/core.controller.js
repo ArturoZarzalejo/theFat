@@ -1,7 +1,7 @@
-(function(){	
+(function(){
 	"use strict";
 
-	/* @ngInject*/ 
+	/* @ngInject*/
   module.exports = function ($rootScope, $scope, $firebaseObject, $firebaseArray, $timeout, $mdSidenav, $cnMenu, $cnNavigate, $location, $interval, $window) {
   	console.log('firebaseObject', $firebaseObject);
   	var url = 'http://popping-inferno-4241.firebaseIO.com';
@@ -16,12 +16,11 @@
   	$scope.todos = $firebaseArray(fireRef);
 
   	console.log('firebaseArray', $scope);
-  	$scope.hola = 'hola';
 		$scope.toggleLeft = buildToggler('left');
 		$scope.menu = {};
 		$scope.cnNavigate = $cnNavigate;
 		$scope.environment = {};
-		$scope.session = $window.session;
+		$scope.toggleLeft = buildToggler('left');
 
 		$rootScope.fab = {
 			isOpen: false,
