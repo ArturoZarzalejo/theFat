@@ -27,7 +27,9 @@ module.exports = {
   ],
   otherFiles: [
     'src/contactNetConfig/**/*.json',
-    'src/contactNetConfig/**/*.svg'
+    'src/contactNetConfig/**/*.svg',
+    'src/contactNetConfig/**/*.png',
+    'src/contactNetConfig/**/*.jpg'
   ],
   appPath: appPath,
   gulpIgnore : gulpIgnore,

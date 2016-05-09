@@ -1,39 +1,101 @@
 <md-sidenav class="md-sidenav-left md-whiteframe-z2 md-closed" md-is-locked-open="$mdMedia('gt-xs') && isOpenLeft()" md-component-id="left">
   <div id="sidenavUserInfo" layout="column">
-    <div flex layout="column" layout-align="center-center" layout-margin>
+    <div flex layout="row" layout-align="center-center" layout-margin>
       <span style="background-image: url(http://static.bleacherreport.net/images/redesign/avatars/default-user-icon-profile.png);" layout></span>
-      <p>{{session.userName}}</p>
+      <div layout="column">
+        <h3>Regístrate</h3>
+        <p>o inicia sesión</p>
+      </div>
     </div>
     <div></div>
   </div>
   <nav layout="column" flex>
-<!--     <ul layout="column" flex class="layoutMenu">
-      <li ng-repeat="(k,v) in menu" layout="column" layout-align="center center">
-        <div layout="row" ng-show="v.href" layout-align="center center">
-          <md-icon md-svg-icon="{{v.icon}}" aria-label="Alarm Icon"></md-icon>
-          <md-button ng-href="{{v.href}}" ng-click="open = !open" flex>
-            {{v.name}}
+    <ul layout="column" flex class="layoutMenu">
+      <!-- <md-list-item>
+        <p> Amigos </p>
+        <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p> Mensajes </p>
+        <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+      </md-list-item>
+      <md-list-item>
+        <p> Compartir </p>
+        <md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>
+      </md-list-item> -->
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Mensajes</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
           </md-button>
         </div>
-        <div layout="row" ng-show="!v.href" layout-align="center center">
-          <md-icon md-svg-icon="{{v.icon}}" aria-label="Alarm Icon"></md-icon>
-          <md-button ng-click="open = !open" flex>
-            {{v.name}}
-          </md-button>
-          <div ng-class="{'arrowDown': open, 'arrowUp' : !open}"></div>
-        </div>
-        <ul ng-show="v.views && open">
-            <li ng-repeat="(kk,vv) in v.views">
-              <md-button cn-navigate="{{vv.uri}}">
-                {{vv.name}}
-              </md-button>
-              <md-button ng-show="v.href" ng-href="{{v.href}}" ng-click="open = !open">
-                {{v.name}}
-              </md-button>
-            </li>
-          </ul>
       </li>
-    </ul> -->
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Amigos</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Compartir</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Solicitar</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Categorías</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Voluntariado</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Invitar amigos</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+      <li layout="row" layout-align="center center">
+        <div layout-align="space-between center" layout="row" flex="80">
+          <md-button aria-label="Settings" ng-click="toggleLeft()">
+            <span>Ayuda</span>
+            <span flex></span>
+            <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
+          </md-button>
+        </div>
+      </li>
+    </ul>
   </nav>
   </md-sidenav>
 <md-content role="main" layout="column" flex>
@@ -43,10 +105,10 @@
         <md-icon md-svg-icon="menu" aria-label="Alarm Icon"></md-icon>
       </md-button>
       <!-- <h1 class="md-body-2" layout-margin>UN POCO LO CAMBIA TODO</h1> -->
-      <md-input-container layout-align="center center">
+      <!-- <md-input-container layout-align="center center">
         <label>Buscar</label>
         <input type="search" ng-model="something">
-      </md-input-container>
+      </md-input-container> -->
     </div>
     <div>
       <!-- <p>{{data | json}}</p> -->
@@ -54,6 +116,6 @@
 
   </md-toolbar>
 
-  <section role="insideView" layout layout="column" ng-class="route" flex ui-view></section>
+  <section role="insideView" layout="column" ng-class="route" flex ui-view></section>
 
 </md-content>

@@ -5,19 +5,24 @@
 		<div flex class="scrolling" layout="column">
 			<div layout="row" layout-align="space-between center">
 				<h3>COMPARTIMOS:</h3>
-				<md-button class="md-icon-button" ng-click="button = !button">+</md-button>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="button = !button">
+					<md-icon md-svg-icon="assets/icons/ic_zoom_out_map_black_24px.svg" aria-label="expand"></md-icon>
+				</md-button>
 			</div>
 			<div flex layout="row">
-				<ul flex layout="column">
-					<li ng-repeat="(k,v) in data.sharing" class="layout-padding" flex layout-align="center center"> 
-						<div layout="row" layout-padding layout-align="center center">
-							<div flex="30">
-								<span>
-									<md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon>
+				<ul flex layout="column" style="margin-bottom:10px;">
+					<li ng-repeat="(k,v) in data.sharing" flex layout-align="center center" layout="row">
+						<div layout="row" flex>
+							<div flex="30" layout-padding layout="row">
+								<span flex style="background-size: cover; background-image: url(http://static.batanga.com/sites/default/files/curiosidades.batanga.com/files/Comida-para-Marte-impresiones-3D-y-pizza-3.jpg)">
+									<!-- <md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon> -->
 								</span>
 							</div>
-							<div flex>
-								<span>{{v}}</span>
+							<div flex layout-align="center start" layout="column">
+								<span class="md-body-2">{{v | uppercase}}</span>
+								<span class="md-body-1">Madrid - Lavapies</span>
+								<span class="md-caption">Hace 15 mins</span>
 							</div>
 						</div>
 					</li>
@@ -27,19 +32,23 @@
 		<div flex class="scrolling" layout="column" ng-show="!button">
 			<div layout="row" layout-align="space-between center">
 				<h3>NECESITAMOS:</h3>
-				<md-button class="md-icon-button">+</md-button>
+				<md-button class="md-icon-button" ng-click="button = !button">
+					<md-icon md-svg-icon="assets/icons/ic_zoom_out_map_black_24px.svg" aria-label="expand"></md-icon>
+				</md-button>
 			</div>
 			<div flex layout="row">
 				<ul flex layout="column">
-					<li ng-repeat="(k,v) in data.needed" flex layout-padding layout-align="center center">
-						<div layout="row" layout-padding layout-align="center center">
-							<div flex="30">
-								<span>
-									<md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon>
+					<li ng-repeat="(k,v) in data.needed" flex layout-align="center center" layout="row">
+						<div layout="row" flex>
+							<div flex="30" layout-padding layout="row">
+								<span flex style="background-size: cover; background-image: url(http://1.bp.blogspot.com/-Qg8NIQZKa_E/UIIt2wcxeBI/AAAAAAAAAFI/u6Xi8H6Gsvc/s1600/pictures_20101012_0901516153_crop1sub7.jpg)">
+									<!-- <md-icon md-svg-icon="assets/icons/ic_account_circle_black_24px.svg" aria-label="Open Chat" class="startIcon"></md-icon> -->
 								</span>
 							</div>
-							<div flex>
-								<span>{{v}}</span>
+							<div flex layout-align="center start" layout="column">
+								<span class="md-body-2">{{v | uppercase}}</span>
+								<span class="md-body-1">Madrid - Lavapies</span>
+								<span class="md-caption">Hace 15 mins</span>
 							</div>
 						</div>
 					</li>
@@ -48,7 +57,7 @@
 		</div>
 
     <md-button class="md-fab md-primary md-hue-2" id="fabButton" aria-label="add">
-        <md-icon md-svg-src="assets/icons/ic_add_black_24px.svg"></md-icon>
+        <!-- <md-icon></md-icon> -->
     </md-button>
 
 	</section>
