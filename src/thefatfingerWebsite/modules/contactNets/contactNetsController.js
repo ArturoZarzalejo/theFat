@@ -3,7 +3,7 @@
 
 
   /* @ngInject */
-  module.exports = function ($rootScope, $scope, $cnContactNets, $cnCreateContactNet){
+  module.exports = function ($scope, $anchorScroll){
 
   	// $scope.contactNetsService = $cnContactNets;
     // $rootScope.fab.trigger.action = $cnCreateContactNet.createContactNet;
@@ -14,8 +14,11 @@
       // $cnContactNets.contactNets = [];
 
   	// });
+		$scope.scrollTo = function () {
+			console.log('lalala');
+			$anchorScroll(arguments[0]);
+		}
 
   }
 
 }());
-

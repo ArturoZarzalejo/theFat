@@ -27,6 +27,9 @@ module.exports = {
   ],
   otherFiles: [
     'src/thefatfingerWebsite/**/*.json',
+    'src/thefatfingerWebsite/**/*.png',
+    'src/thefatfingerWebsite/**/*.jpg',
+    'src/thefatfingerWebsite/**/*.gif',
     'src/thefatfingerWebsite/**/*.svg'
   ],
   appPath: appPath,
