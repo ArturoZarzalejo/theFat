@@ -1,0 +1,35 @@
+<div id="usersOneDay" layout="row" flex>
+
+	<section flex layout="row" layout-align="center">
+
+		<div class="md-item" flex="70">
+			<md-card ng-repeat="(k,v) in usersOneDay">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{v.name}}</span>
+            <span class="md-subhead">{{v.description}}</span>
+						<span class="md-subhead">{{v.mail}}</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-sm card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Editar</md-button>
+          <md-button>Ver</md-button>
+        </md-card-actions>
+      </md-card>
+		</div>
+
+
+		<div layout="row" layout-padding layout-align="space-around" ng-if="loading" flex layout-fill>
+			<md-progress-circular class="md-accent" md-mode="indeterminate" md-diameter="80"></md-progress-circular>
+		</div>
+
+		<md-button class="md-fab md-primary" id="fabButton" aria-label="add">
+        <md-icon md-svg-src="assets/icons/ic_add_black_24px.svg"></md-icon>
+    </md-button>
+
+	</section>
+
+</div>
