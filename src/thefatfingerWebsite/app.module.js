@@ -2,22 +2,22 @@
 	"use strict";
 
 	var cnChannels = require('./modules/usersOneDay/');
-	var cnContactNets = require('./modules/contactNets/');
-	var cnRepos = require('./modules/repos/');
+	var ffwsHome = require('./modules/home/');
+	var ffwsWorks = require('./modules/works/');
 	var cnCore = require('./modules/core/');
 	var cnRules = require('./modules/rules/');
 
 	var modules = [
-		'ui.router', 
-	  'ngSanitize', 
+		'ui.router',
+	  'ngSanitize',
 	  'ngAnimate',
 	  'ngAria',
 	  'ngMaterial',
 	  'firebase',
 	  cnCore.name,
 	  cnChannels.name,
-	  cnContactNets.name,
-	  cnRepos.name,
+	  ffwsHome.name,
+	  ffwsWorks.name,
 	  cnRules.name
 	];
 
@@ -28,7 +28,7 @@
 	* @description
 	*
 	* # Virtual Center Config
-	*   
+	*
 	*
 	*/
 

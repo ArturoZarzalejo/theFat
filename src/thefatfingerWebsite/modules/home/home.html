@@ -1,7 +1,8 @@
 <section id="sectionHome" flex>
 
 	<header flex layout="column">
-		<nav layout="row">
+		<div nav-website></div>
+		<!-- <nav layout="row">
 			<ul layout="row">
 				<li flex>
 					<md-button ng-click="scrollTo('about')">
@@ -31,9 +32,9 @@
 					<li class="flex"></li>
 				</ul>
 			</div>
-		</nav>
-		<div class="bg-header-slide flex">
-			<md-button aria-label="scrollto about" class="md-icon-button" ng-click="scrollTo('about')">
+		</nav> -->
+		<div class="bg-header-slide" flex>
+			<md-button aria-label="scrollto about" class="md-icon-button" ng-click="$ffNavigate.scrollTo('about')">
 				<md-icon md-svg-icon="assets/icons/ic_keyboard_arrow_down_white_24px.svg"></md-icon>
 			</md-button>
 		</div>
@@ -80,25 +81,17 @@
 			<h3>WORK</h3>
 		</div>
 		<div layout="row" class="flex">
-			<div layout="column" class="flex" layout-align="start center">
-				<img src="http://inspiration.lumiart.cz/wp-content/uploads/2014/10/054_twitter-website-in-material-design.jpg" alt="" width="95%;"/>
+			<div
+			layout="column"
+			flex
+			layout-align="start center"
+			ng-repeat="(k,v) in $ffWorks.works track by $index"
+			ng-click="selectWork(v)">
+				<img ng-src="{{v.url}}" alt="" width="95%;"/>
 				<p>
-					ESPARTBCN
+					{{v.name}}
 				</p>
 			</div>
-			<div layout="column" class="flex" layout-align="start center">
-				<img src="https://camo.githubusercontent.com/499eda8efbd30966fd0326d062d5c1aa549a4dc9/687474703a2f2f7777772e6765746d646c2e696f2f6173736574732f676f6f676c652d73657276696365732e706e67" alt="" width="95%;"/>
-				<p>
-					1 DIA
-				</p>
-			</div>
-			<div layout="column" class="flex" layout-align="start center">
-				<img src="http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/1poXfoKp7KT-wOVy4kA92aw.png" alt="" width="95%;"/>
-				<p>
-					GREENPEACE
-				</p>
-			</div>
-
 		</div>
 	</section>
 
@@ -181,7 +174,7 @@
 			 </md-input-container>
 		</div>
 		<div>
-			<md-button on-tap="_send">
+			<md-button ng-click="send()">
 				Enviar
 			</md-button>
 		</div>

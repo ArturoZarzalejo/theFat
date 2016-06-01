@@ -1,0 +1,25 @@
+.nav-website, [nav-website], nav-website {
+	position: relative;
+  top: 0;
+	z-index: 2;
+	background:#e43e55;
+	color: #FFF;
+  width: 100%;
+	ul{
+		margin: 0 auto;
+		padding: 1em;
+		position: relative;
+		max-width: 350px;
+		width: 100%;
+		li{
+			list-style: none;
+		}
+	}
+	.social {
+		position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100px;
+	}
+}

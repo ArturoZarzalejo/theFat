@@ -1,8 +1,8 @@
 (function () {
 	'use strict';
 
-	module.exports = angular.module('cnContactNets', [])
-		.controller('contactNetsController', require('./contactNetsController.js'))
+	module.exports = angular.module('home', [])
+		.controller('homeController', require('./home.controller.js'))
 		.directive('cnContactnetSkills', require('./directives/skills/skills.js'))
 		.directive('cnContactnetQualifications', require('./directives/qualifications/qualifications.js'))
 		.directive('cnContactnetPauseStates', require('./directives/pauseStates/pauseStates.js'))
@@ -12,6 +12,7 @@
 		.directive('cnContactNetChannelsConfig', require('./directives/cnContactNetChannelsConfig/cnContactNetChannelsConfig.js'))
 		.directive('cnContactnetBackoffice', require('./directives/cnContactnetBackoffice/cnContactnetBackoffice.js'))
 		.directive('cnContactnetCategorizations', require('./directives/categorizations/categorizations.js'))
+		.service('$ffWorks', require('./services/worksService.js'))
 	;
 
 }());
