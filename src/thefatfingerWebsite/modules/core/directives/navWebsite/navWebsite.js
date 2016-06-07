@@ -8,7 +8,7 @@
         restrict: 'EA',
         scope : {},
         link: link,
-        templateUrl: '/thefatfingerWebsite/modules/core/directives/navWebsite/navWebsite.html',
+        templateUrl: '/modules/core/directives/navWebsite/navWebsite.html',
       	controller: controller
     };
 

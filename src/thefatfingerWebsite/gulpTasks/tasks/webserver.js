@@ -7,7 +7,7 @@ var config = require('../config');
 module.exports = function(gulp, appPrefix) {
 	gulp.task(appPrefix + 'webserver', function() {
 	  // gulp.src(config.outputDir)
-	  gulp.src('dist/')
+	  gulp.src('dist/thefatfingerWebsite')
 	    .pipe(server({
 	      livereload: true,
 	      port: 34201,
