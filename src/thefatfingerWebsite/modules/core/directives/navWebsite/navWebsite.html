@@ -1,5 +1,5 @@
 <nav layout="row">
-  <ul layout="row">
+  <ul layout="row" class="menu">
     <li flex>
       <md-button ng-click="$ffNavigate.scrollTo('about')">
         About
@@ -23,9 +23,21 @@
   </ul>
   <div class="social">
     <ul class="layout horizontal">
-      <li class="flex"></li>
-      <li class="flex"></li>
-      <li class="flex"></li>
+      <li class="flex">
+        <md-button style="background:#fff;" class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="assets/icons/ic_facebook.svg"></md-icon>
+        </md-button>
+      </li>
+      <li class="flex">
+        <md-button style="background:#fff;" class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="assets/icons/ic_twitter.svg"></md-icon>
+        </md-button>
+      </li>
+      <li class="flex">
+        <md-button style="background:#fff;" class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="assets/icons/ic_instagram.svg"></md-icon>
+        </md-button>
+      </li>
     </ul>
   </div>
 </nav>

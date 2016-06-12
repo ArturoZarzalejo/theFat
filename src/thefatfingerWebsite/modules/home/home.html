@@ -40,15 +40,15 @@
 		</div>
 	</header>
 
-	<section layout="column" layout-align="start center" class="about" id="about">
-		<div class="layout horizontal">
-			<h3>ABOUT</h3>
-		</div>
+	<section layout="column" layout-align="start center" class="about separator" id="about">
+		<!-- <div class="layout horizontal">
+		</div> -->
 		<div class="layout horizontal flex">
 			<div flex>
-				<img src="assets/images/logoBig.png" alt="" width="80%;"/>
+				<img style="top: 100px; position: relative;" src="assets/images/logoBig.png" alt="" width="80%;"/>
 			</div>
-			<div flex="65">
+			<div flex="55">
+				<h3>ABOUT</h3>
 				<p>
 					We love to communicate. We love to do it in a different and sustainable way.
 					We love new technologies, understood as an inherent part of our lives.
@@ -74,11 +74,22 @@
 			</div>
 
 		</div>
+		<div class="whatwedo">
+			<img src="assets/images/whatwedo.jpg" width="100%" alt="" />
+		</div>
 	</section>
 
-	<section layout="column" layout-align="start center" class="work" id="work">
-		<div class="layout horizontal">
+	<section layout="column" layout-align="start center" class="work separator" id="work">
+		<div class="layout horizontal title" layout-align="center">
 			<h3>WORK</h3>
+			<div layout="row">
+				<md-button class="md-icon-button" aria-label="column">
+					<md-icon md-svg-icon="assets/icons/ic_view_column_black_24px.svg"></md-icon>
+				</md-button>
+				<md-button class="md-icon-button" aria-label="module">
+					<md-icon md-svg-icon="assets/icons/ic_view_module_black_24px.svg"></md-icon>
+				</md-button>
+			</div>
 		</div>
 		<div layout="row" class="flex">
 			<div
@@ -95,7 +106,7 @@
 		</div>
 	</section>
 
-	<section layout="column" layout-align="start center" class="team" id="team">
+	<section layout="column" layout-align="start center" class="team separator" id="team">
 		<div layout="row" layout-align="start center">
 			<h3>TEAM</h3>
 		</div>
@@ -159,11 +170,35 @@
 		      <input ng-model="contact.subject">
 		    </md-input-container>
 			</div>
-			<div flex="65">
+			<div flex="65" class="info">
 				<span>
 					Just drop us a line and we will get back to you with a big smile.
 					You can also give us a call or send us a direct e-mail:
 				</span>
+				<ul>
+					<li><span>hi@thefatfinger.com</span></li>
+					<li><span>+34 656 483 659 / +34 650 876 445</span></li>
+				</ul>
+				<h3>FOLLOW THE FINGER!</h3>
+				<div class="social">
+			    <ul class="layout horizontal">
+			      <li class="flex">
+			        <md-button class="md-icon-button" aria-label="More">
+			          <md-icon md-svg-icon="assets/icons/ic_facebook.svg"></md-icon>
+			        </md-button>
+			      </li>
+			      <li class="flex">
+			        <md-button class="md-icon-button" aria-label="More">
+			          <md-icon md-svg-icon="assets/icons/ic_twitter.svg"></md-icon>
+			        </md-button>
+			      </li>
+			      <li class="flex">
+			        <md-button class="md-icon-button" aria-label="More">
+			          <md-icon md-svg-icon="assets/icons/ic_instagram.svg"></md-icon>
+			        </md-button>
+			      </li>
+			    </ul>
+			  </div>
 			</div>
 		</div>
 		<div flex>

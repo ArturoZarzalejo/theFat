@@ -15,11 +15,24 @@
 			list-style: none;
 		}
 	}
+	ul.menu {
+		&:after {
+			position: absolute;
+	    width: 36px;
+	    height: 36px;
+	    content: '';
+	    left: 0;
+	    top: 50%;
+	    transform: translate(-50%,-50%);
+	    background-image: url(../assets/images/logoNav.png);
+	    background-size: cover;
+		}
+	}
 	.social {
 		position: absolute;
     right: 10px;
     top: 50%;
     transform: translate(0, -50%);
-    width: 100px;
+    width: 180px;
 	}
 }

@@ -5,6 +5,20 @@
 	* {
 		box-sizing: border-box;
 	}
+	.separator {
+		&:after {
+			content: '';
+	    background-image: url(../assets/images/separador.jpg);
+	    width: 100%;
+	    bottom: 0px;
+	    position: absolute;
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    height: 60px;
+	    padding: 0 20px;
+	    box-sizing: border-box;
+		}
+	}
 	header{
 		height: 100%;
 		position: relative;
@@ -12,7 +26,7 @@
 		padding: 0;
 		.bg-header-slide {
 			height: 100%;
-			background-image: url('../assets/images/Carrusel_1.gif');
+			background-image: url('../assets/images/Carrusel_1_baja.gif');
 			background-position: top center;
 			background-size: cover;
 			position: absolute;
@@ -61,38 +75,59 @@
 
 	section.about {
 		max-width: 1000px;
-		height: 80%;
+		height: 90%;
 		margin: 0 auto;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		position: relative;
+		.whatwedo {
+			top: -100px;
+    	position: relative;
+		}
+		>div {
+			color: #e43e55;
+			h3 {
+				font-size: 3em;
+			}
+		}
 	}
-	section.about >div {
-		color: red;
-	}
-	section.about >div:first-child{
-		text-align: center;
-		font-size: 3em;
-	}
+	// section.about >div:first-child{
+	// 	text-align: center;
+	// 	font-size: 3em;
+	// }
 
 	section.work {
 		max-width: 1000px;
 		height: 80%;
+		position: relative;
 		margin: 0 auto;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+		.title {
+			width: 100%;
+			position: relative;
+			div {
+				position: absolute;
+		    width: 120px;
+		    right: 20px;
+		    top: 50%;
+		    transform: translate(0, -50%);
+				md-icon {
+					color: #e43e55;
+				}
+			}
+		}
 	}
 	section.work >div:first-child {
-		color: red;
+		color: #e43e55;
 		text-align: center;
 		font-size: 3em;
 	}
 
 	section.team {
 		max-width: 1000px;
-		height: 80%;
+		height: 90%;
+		position: relative;
 		margin: 0 auto;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 	}
 	section.team >div:first-child {
-		color: red;
+		color: #e43e55;
 		text-align: center;
 		font-size: 3em;
 	}
@@ -100,17 +135,47 @@
 	section.contact {
 		max-width: 1000px;
 		height: 80%;
+		position: relative;
 		margin: 0 auto;
-		// border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-	}
-	section.contact >div:first-child {
-		color: red;
-		text-align: center;
-		font-size: 3em;
+		.info {
+			padding: 1em;
+			>span {
+				margin: 0.5em 0;
+			}
+			>ul {
+				padding: 0;
+				margin: 0.5em 0;
+				li {
+					list-style: none;
+				}
+			}
+			.social {
+				width: 180px;
+				ul {
+					padding: 0;
+				}
+				li {
+					list-style: none;
+					button {
+						background: #e43e55;
+						md-icon {
+							color: #FFF;
+						}
+					}
+				}
+			}
+		}
+		> div{
+			&:first-child {
+				color: #e43e55;
+				text-align: center;
+				font-size: 3em;
+			}
+		}
 	}
 
 	footer {
-		background: #e43e55;
+		background: #e43f55;
 		color: #fff;
 	}
 }
