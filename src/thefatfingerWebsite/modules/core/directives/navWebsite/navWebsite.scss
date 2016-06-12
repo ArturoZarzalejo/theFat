@@ -5,31 +5,46 @@
 	background:#e43e55;
 	color: #FFF;
   width: 100%;
-	ul{
-		margin: 0 auto;
-		padding: 1em;
-		position: relative;
-		max-width: 350px;
-		width: 100%;
-		li{
-			list-style: none;
+	nav {
+		>	ul{
+			margin: 0 auto;
+			padding: 1em;
+			position: relative;
+			max-width: 350px;
+			width: 100%;
+			li{
+				list-style: none;
+				button {
+					min-width: 100%!important;
+					padding: inherit;
+					margin: 0;
+					@media (min-width: 450px) {
+						margin: 6px 8px;
+						padding: 0 6px;
+					}
+				}
+			}
 		}
+
 	}
 	ul.menu {
 		&:after {
-			position: absolute;
-	    width: 36px;
-	    height: 36px;
-	    content: '';
-	    left: 0;
-	    top: 50%;
-	    transform: translate(-50%,-50%);
-	    background-image: url(../assets/images/logoNav.png);
-	    background-size: cover;
+			@media (min-width: 450px) {
+				position: absolute;
+				width: 36px;
+				height: 36px;
+				content: '';
+				left: 0;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				background-image: url(../assets/images/logoNav.png);
+				background-size: cover;
+			}
 		}
 	}
 	.social {
 		position: absolute;
+		display: none;
     right: 10px;
     top: 50%;
     transform: translate(0, -50%);

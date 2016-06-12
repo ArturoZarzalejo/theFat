@@ -2,8 +2,9 @@
 
 	<section flex layout="column">
 		<div nav-website></div>
-		<div flex="50">
-			<img width="100%" ng-src="{{::actualWork.url}}" alt="{{::actualWork.id}}"/>
+		<div flex="50" layout-padding>
+			<h3 style="color:red">{{::actualWork.name}}</h3>
+			<img width="50%" ng-src="{{::actualWork.url}}" alt="{{::actualWork.id}}"/>
 		</div>
 
 	</section>

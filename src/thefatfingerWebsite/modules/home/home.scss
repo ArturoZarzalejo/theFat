@@ -10,13 +10,16 @@
 			content: '';
 	    background-image: url(../assets/images/separador.jpg);
 	    width: 100%;
-	    bottom: 0px;
+	    bottom: -20px;
 	    position: absolute;
 	    background-position: top center;
 	    background-repeat: no-repeat;
 	    height: 60px;
 	    padding: 0 20px;
 	    box-sizing: border-box;
+			@media (min-width: 450px) {
+				bottom: 0px;
+			}
 		}
 	}
 	header{
@@ -75,9 +78,11 @@
 
 	section.about {
 		max-width: 1000px;
-		height: 90%;
 		margin: 0 auto;
 		position: relative;
+		@media (min-width: 450px) {
+			height: 90%;
+		}
 		.whatwedo {
 			top: -100px;
     	position: relative;
@@ -86,6 +91,18 @@
 			color: #e43e55;
 			h3 {
 				font-size: 3em;
+				// padding: 0 0.5em;
+				text-align: center;
+				@media (min-width: 450px) {
+					padding: 0;
+					text-align: left;
+				}
+			}
+			p{
+				padding: 0 1em;
+				@media (min-width: 450px) {
+					padding: 0;
+				}
 			}
 		}
 	}
@@ -96,9 +113,11 @@
 
 	section.work {
 		max-width: 1000px;
-		height: 80%;
 		position: relative;
 		margin: 0 auto;
+		@media (min-width: 450px) {
+			height: 80%;
+		}
 		.title {
 			width: 100%;
 			position: relative;
@@ -122,9 +141,11 @@
 
 	section.team {
 		max-width: 1000px;
-		height: 90%;
 		position: relative;
 		margin: 0 auto;
+		@media (min-width: 450px) {
+			height: 90%;
+		}
 	}
 	section.team >div:first-child {
 		color: #e43e55;
@@ -134,9 +155,11 @@
 
 	section.contact {
 		max-width: 1000px;
-		height: 80%;
 		position: relative;
 		margin: 0 auto;
+		@media (min-width: 450px) {
+			height: 80%;
+		}
 		.info {
 			padding: 1em;
 			>span {
@@ -177,5 +200,13 @@
 	footer {
 		background: #e43f55;
 		color: #fff;
+		div{
+			img {
+				width: 50%;
+				@media (min-width: 450px) {
+					width: 15%;
+				}
+			}
+		}
 	}
 }

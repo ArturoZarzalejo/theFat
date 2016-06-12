@@ -40,14 +40,14 @@
 		</div>
 	</header>
 
-	<section layout="column" layout-align="start center" class="about separator" id="about">
+	<section layout-gt-xs="column" layout-align="start center" class="about separator" id="about">
 		<!-- <div class="layout horizontal">
 		</div> -->
-		<div class="layout horizontal flex">
-			<div flex>
+		<div class="flex" layout-gt-xs="row">
+			<div flex-gt-xs hide-xs>
 				<img style="top: 100px; position: relative;" src="assets/images/logoBig.png" alt="" width="80%;"/>
 			</div>
-			<div flex="55">
+			<div flex flex-gt-xs="55">
 				<h3>ABOUT</h3>
 				<p>
 					We love to communicate. We love to do it in a different and sustainable way.
@@ -74,7 +74,7 @@
 			</div>
 
 		</div>
-		<div class="whatwedo">
+		<div class="whatwedo" hide-xs>
 			<img src="assets/images/whatwedo.jpg" width="100%" alt="" />
 		</div>
 	</section>
@@ -82,7 +82,7 @@
 	<section layout="column" layout-align="start center" class="work separator" id="work">
 		<div class="layout horizontal title" layout-align="center">
 			<h3>WORK</h3>
-			<div layout="row">
+			<div layout="row" hide-xs>
 				<md-button class="md-icon-button" aria-label="column">
 					<md-icon md-svg-icon="assets/icons/ic_view_column_black_24px.svg"></md-icon>
 				</md-button>
@@ -91,7 +91,7 @@
 				</md-button>
 			</div>
 		</div>
-		<div layout="row" class="flex">
+		<div layout="column" layout-gt-xs="row" class="flex">
 			<div
 			layout="column"
 			flex
@@ -110,7 +110,7 @@
 		<div layout="row" layout-align="start center">
 			<h3>TEAM</h3>
 		</div>
-		<div layout="row" flex>
+		<div layout="column" layout-gt-xs="row" flex>
 			<div layout="column" layout-padding flex layout-align="start center">
 				<img src="assets/images/antonio.jpg" alt="" width="80%;"/>
 				<p>
@@ -179,8 +179,8 @@
 					<li><span>hi@thefatfinger.com</span></li>
 					<li><span>+34 656 483 659 / +34 650 876 445</span></li>
 				</ul>
-				<h3>FOLLOW THE FINGER!</h3>
-				<div class="social">
+				<h3 style="display:none;">FOLLOW THE FINGER!</h3>
+				<div class="social" style="display:none;">
 			    <ul class="layout horizontal">
 			      <li class="flex">
 			        <md-button class="md-icon-button" aria-label="More">
@@ -201,7 +201,7 @@
 			  </div>
 			</div>
 		</div>
-		<div flex>
+		<div>
 			<!-- <paper-textarea label="Message"></paper-textarea> -->
 			<md-input-container class="md-block">
 				 <label>Message</label>
@@ -209,7 +209,7 @@
 			 </md-input-container>
 		</div>
 		<div>
-			<md-button ng-click="send()">
+			<md-button style="background: #e43e55; color:#FFF;" layout-margin ng-click="send()">
 				Enviar
 			</md-button>
 		</div>
