@@ -17,6 +17,7 @@
     function link(scope, element, attr, ctrl) {
       console.log('navWebsite', scope);
 			scope.$ffNavigate = $ffNavigate;
+
     }
 
     /* @ngInject */

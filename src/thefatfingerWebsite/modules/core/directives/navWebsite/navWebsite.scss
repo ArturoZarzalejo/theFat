@@ -28,6 +28,12 @@
 
 	}
 	ul.menu {
+		li .md-button.md-focused,
+		li .md-button.md-default-theme:not([disabled]):hover,
+		li .md-button:not([disabled]):hover {
+			font-weight: 900;
+			background-color: inherit;
+		}
 		&:after {
 			@media (min-width: 450px) {
 				position: absolute;
